@@ -20,3 +20,6 @@ The project is divided into two parts:
 - Written report in LaTeX (compiled to PDF).  
 
 ## 📂 Repository Structure
+## 🔗 Links
+- Kaggle Dataset: [here](https://www.kaggle.com/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs)  
+- GitHub Repository: [https://github.com/18069682/MIT805-big-data-stock-analysis](https://github.com/18069682/MIT805-big-data-stock-analysis)  
