@@ -1,1 +1,84 @@
+\documentclass[conference]{IEEEtran}
+\usepackage{graphicx}
+\usepackage{url}
+
+\begin{document}
+
+\title{MIT 805 – Big Data: Assignment 1 \\ Dataset Collection and 7Vs Analysis}
+
+\author{\IEEEauthorblockN{Muphulusi Dzivhani}
+\IEEEauthorblockA{Student, MIT 805 Big Data\\
+Email: u18069682@tuks.co.za}
+}
+
+\maketitle
+
+\begin{abstract}
+This report presents the dataset selected for Assignment 1 of MIT 805 – Big Data and provides an analysis of the dataset using the 7Vs of Big Data. The chosen dataset, sourced from Kaggle, contains historical stock price and volume data for all US stocks and ETFs. It is analyzed for its characteristics, business value, and potential societal insights.
+\end{abstract}
+
+\section{Introduction}
+The explosive growth of financial markets has resulted in massive amounts of stock data being generated daily. This dataset, sourced from Kaggle, provides historical stock price and volume data for all US stocks and ETFs. It is ideal for applying Big Data concepts because of its scale, variety of attributes, and potential for extracting meaningful business insights.
+
+\section{Dataset Description}
+\begin{itemize}
+    \item \textbf{Source:} Kaggle (Boris Marjanovic, “Price and Volume Data for All US Stocks \& ETFs”)
+    \item \textbf{Link:} \url{https://www.kaggle.com/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs}
+    \item \textbf{Size:} $\sim$516 MB compressed, expands to several GB
+    \item \textbf{Format:} CSV files
+    \item \textbf{Attributes:} Date, Open, High, Low, Close, Volume, Ticker Symbol
+    \item \textbf{Coverage:} Multiple US stock exchanges (NYSE, NASDAQ, AMEX) and ETFs
+    \item \textbf{Time Period:} Daily trading history spanning several years
+\end{itemize}
+
+\section{Big Data Analysis – The 7 Vs}
+\subsection{Volume}
+The dataset contains millions of records across thousands of tickers. Each record includes daily trading activity with multiple attributes. File size (several GB uncompressed) demonstrates ``big data'' characteristics.
+
+\subsection{Velocity}
+Stock market data is generated at high speed (daily, even per second in live trading). While this dataset is historical, it reflects the continuous flow of data in financial systems.
+
+\subsection{Variety}
+The dataset includes numerical (prices, volume) and categorical (ticker symbols) data. It can also be integrated with macroeconomic or sector datasets.
+
+\subsection{Value}
+Insights from this dataset can drive investment strategies, risk management, fraud detection, and regulatory oversight.
+
+\subsection{Veracity}
+The dataset comes from reliable sources, though anomalies such as stock splits and missing days may exist, requiring cleaning and validation.
+
+\subsection{Variability}
+Market behavior is highly volatile depending on economic events such as the 2008 financial crisis and the COVID-19 pandemic.
+
+\subsection{Validity}
+Records must reflect true trading activity. Outliers need verification against official financial records.
+
+\subsection{Visualization}
+Line graphs (price trends), bar charts (volume per stock), and dashboards (sector performance) enable pattern discovery.
+
+\section{Business and Societal Insights}
+\begin{itemize}
+    \item \textbf{Investors \& Traders:} Forecast stock movements, design trading algorithms.
+    \item \textbf{Financial Institutions:} Manage risk, detect fraud, optimize portfolios.
+    \item \textbf{Policy Makers \& Regulators:} Monitor systemic risk and economic stability.
+    \item \textbf{Researchers:} Explore stock behavior during crises.
+\end{itemize}
+
+\section{Conclusion}
+This dataset provides a comprehensive view of stock market behavior over time. Analyzing it through the 7 Vs framework demonstrates its suitability for Big Data projects. Assignment 2 will involve Hadoop MapReduce processing and visualization.
+
+\section*{Appendix}
+GitHub Repository: \url{https://github.com/18069682/MIT805-big-data-stock-analysis}
+
+
+
+\begin{thebibliography}{00}
+\bibitem{ref1} B. Marjanovic, ``Price and Volume Data for All US Stocks \& ETFs,'' Kaggle, 2017. [Online]. Available: \url{https://www.kaggle.com/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs}
+\bibitem{ref2} Apache Software Foundation, ``Apache Hadoop,'' 2024. [Online]. Available: \url{https://hadoop.apache.org/}
+\bibitem{ref3} Yahoo Finance, ``Stock Market Data and Historical Prices,'' Yahoo Inc., 2024. [Online]. Available: \url{https://finance.yahoo.com/}
+\bibitem{ref4} New York City Open Data, ``NYC Open Data Portal – Transportation,'' City of New York, 2024. [Online]. Available: \url{https://opendata.cityofnewyork.us/}
+\end{thebibliography}
+
+\end{document}
+
 
