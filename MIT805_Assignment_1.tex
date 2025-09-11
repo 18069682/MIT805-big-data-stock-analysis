@@ -1,0 +1,127 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xurl}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue]{hyperref}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+% Title with UP logo
+\makeatletter
+\renewcommand{\maketitle}{
+  \begin{center}
+    \includegraphics[width=0.25\linewidth]{up logo.jpeg}\par\vspace{1em}
+    {\LARGE \bfseries \@title \par}
+    \vspace{1em}
+    {\large \@author \par}
+    \vspace{1em}
+  \end{center}
+}
+\makeatother
+
+\title{MIT 805 Assignment 1 Part 1 \\ Big Data Collection and Analysis}
+\author{Muphulusi Dzivhani \\ Student Number: u18069682 \\ Email: \url{u18069682@tuks.co.za}}
+\renewenvironment{abstract}{
+  \begin{center}
+    \bfseries Abstract
+  \end{center}
+}{\par\vspace{1em}}
+
+
+\begin{document}
+\maketitle
+
+
+\begin{abstract}
+This report details the selection and analysis of a large-scale Stock Exchange dataset for MIT 805 Big Data, sourced from Kaggle. The dataset contains historical daily price and volume data for all U.S. stocks and ETFs. The analysis is structured around the Core 3 Vs of Big Data (Volume, Velocity, Variety), the principle of Value, and four additional Vs (Veracity, Variability, Visualization, and Validity) as required by the assignment brief. The report describes the dataset's characteristics, evaluates its challenges and opportunities through this framework, and discusses the significant potential business value that can be extracted through subsequent processing with Big Data tools like Hadoop MapReduce.
+\end{abstract}
+
+\section{Introduction}
+The global financial sector is a perfect generator of Big Data, with stock exchanges producing terabytes of data daily from trading activities, news feeds, and transactional records. Analyzing this data is critical for investors, economists, and regulators to discern trends, manage risk, and foster market stability. This report presents the collection and preliminary analysis of a historical stock market dataset \cite{ref1}, selected from the Stock Exchange domain as per the assignment guidelines. The dataset is evaluated through the structured lens of the 7 Vs of Big Data, beginning with the core three, then value, and finally four other selected Vs to establish its suitability for large-scale analysis and to outline the potential insights that can be derived, fulfilling the requirements for Assignment 1 of MIT 805.
+
+\section{Dataset Description}
+The selected dataset offers a comprehensive record of trading activity, ideal for longitudinal market analysis.
+
+\begin{itemize}
+    \item \textbf{Domain:} Stock Exchange 
+    \item \textbf{Source:} Kaggle (Contributed by Boris Marjanovic) \cite{ref1}.
+    \item \textbf{Link:} \url{https://www.kaggle.com/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs}
+    \item \textbf{Content:} Historical daily Open, High, Low, Close (OHLC) prices and trading Volume for individual stocks and ETFs.
+    \item \textbf{Size:} The dataset is approximately 15GB, meeting the project requirement of being between 10GB and 40GB for meaningful Big Data analysis.
+    \item \textbf{Format:} Comma-Separated Values (CSV), a standard, structured format for tabular data.
+    \item \textbf{Scope:} Encompasses tickers from major U.S. exchanges including NYSE, NASDAQ, and AMEX.
+    \item \textbf{Time Period:} Data spans multiple decades, providing a rich history of market performance through various economic cycles.
+\end{itemize}
+
+\section{Big Data Analysis : The 7 Vs}
+The following analysis evaluates the dataset against the Core 3 Vs (Volume, Velocity, Variety), the principle of Value, and four additional Vs (Veracity, Variability, Visualization, and Validity) as required by the assignment brief.
+
+\subsection{Core 3 Vs}
+
+\subsubsection{Volume}
+The \textbf{Volume} of this dataset is substantial. It contains millions of records across thousands of unique ticker symbols, with each record containing multiple price points and volume figures. The size of approximately 15GB qualifies it as a large-volume dataset that is impractical to process with traditional tools like Microsoft Excel and necessitates distributed processing frameworks like Apache Hadoop \cite{ref2}.
+
+\subsubsection{Velocity}
+While this specific dataset is a historical batch download, it represents the aggregation of extremely high-\textbf{Velocity} data. In a live environment, stock market data is generated in real-time, with ticks occurring in milliseconds. Analyzing historical data at this daily granularity is the first step towards understanding systems capable of handling near-real-time data streams for algorithmic trading.
+
+\subsubsection{Variety}
+The dataset exhibits \textbf{Variety} in its composition. The core data is strictly structured. However, its true analytical power is unlocked through integration with other data sources, introducing semi-structured or unstructured data, thereby increasing its variety.
+
+\subsection{Value}
+The \textbf{Value} derived from this data is the primary justification for its analysis. Potential values include:
+\begin{itemize}
+    \item \textbf{Predictive Analytics:} Building models to forecast stock price movements.
+    \item \textbf{Risk Management:} Identifying volatile stocks and constructing diversified portfolios to mitigate risk.
+    \item \textbf{Algorithmic Trading Backtesting:} Developing and validating automated trading strategies against historical data.
+    \item \textbf{Economic Research:} Studying market responses to macroeconomic events.
+\end{itemize}
+
+\subsection{Additional Vs}
+
+\subsubsection{Veracity}
+\textbf{Veracity} refers to the data's trustworthiness and quality. While sourced from a reputable platform (Kaggle) and ultimately from reliable financial feeds, data quality is not guaranteed. Issues such as missing days , adjustment for stock splits, and possible outliers must be addressed through rigorous data cleaning and validation processes to ensure the accuracy of subsequent analysis.
+
+\subsubsection{Variability}
+Market data is highly \textbf{Variable}. Its meaning and the patterns within can change rapidly based on external factors like economic indicators, geopolitical events, and corporate announcements. The rate of data flow and its significance are inconsistent, peaking during market hours and around major news events, requiring robust systems to handle these fluctuations in context and volume.
+
+\subsubsection{Visualization}
+\textbf{Visualization} is crucial for interpreting the complex relationships within this data. Effective visualizations will be key in Assignment 2 and include:
+\begin{itemize}
+    \item \textbf{Time-series Line Charts:} For tracking individual stock performance over time.
+    \item \textbf{Candlestick Charts:} For detailed analysis of daily price movements.
+    \item \textbf{Heatmaps:} For visualizing correlation matrices between different stocks or sectors.
+    \item \textbf{Interactive Dashboards:} For exploring sector performance and portfolio composition.
+\end{itemize}
+
+\subsubsection{Validity}
+\textbf{Validity} concerns whether the data is correct, accurate, and meaningful for its intended use. For stock analysis, each record must validly represent a true trading event on the specified date. Ensuring validity involves checking for anomalies like negative prices or volumes, or prices that deviate significantly from typical ranges, which could indicate data corruption and would need to be addressed before analysis.
+
+\section{Business and Societal Insights}
+The analysis of this dataset can yield actionable intelligence for various stakeholders:
+\begin{itemize}
+    \item \textbf{Investors \& Traders:} To identify trends, forecast potential price movements, and backtest trading strategies to improve returns.
+    \item \textbf{Financial Institutions:} To enhance risk management frameworks, detect anomalous trading patterns indicative of fraud, and optimize asset allocation for clients.
+    \item \textbf{Policy Makers \& Regulators:} To monitor the market for systemic risks, understand the impact of economic policies, and ensure overall market stability and transparency.
+    \item \textbf{Researchers \& Academics:} To study market efficiency, behavioral economics, and the impact of specific events on market dynamics.
+\end{itemize}
+
+\section{Conclusion}
+The selected historical US stocks and ETFs dataset is a strong candidate for Big Data analysis due to its significant volume, the inherent velocity of the domain it represents, and the clear potential for extracting high value. The analysis through the 7 Vs framework : the core three, value, and four others, highlights both its opportunities and the challenges related to its veracity, variability, and validity that must be managed. This foundational analysis sets the stage for Assignment 2, which will involve processing this dataset using Hadoop MapReduce to extract meaningful insights and creating visualizations to interpret the results effectively.
+
+\section*{Appendix}
+\begin{itemize}
+    \item GitHub Repository: \url{https://github.com/18069682/MIT805-big-data-stock-analysis}
+    \item The repository contains this report, the dataset description, and initial project setup. Code for MapReduce jobs and visualization will be added for Assignment 2.
+\end{itemize}
+
+\begin{thebibliography}{00}
+\bibitem{ref1} B. Marjanovic, ``Price and Volume Data for All US Stocks \& ETFs,'' Kaggle, 2017. [Online]. Available: \url{https://www.kaggle.com/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs}
+\bibitem{ref2} Apache Software Foundation, ``Apache Hadoop,'' 2024. [Online]. Available: \url{https://hadoop.apache.org/}
+\bibitem{ref3} ``Yahoo Finance,'' Yahoo Inc., 2024. [Online]. Available: \url{https://finance.yahoo.com/}
+\bibitem{ref4} I. H. Witten, E. Frank, M. A. Hall, and C. J. Pal, \textit{Data Mining: Practical Machine Learning Tools and Techniques}, 4th ed. Morgan Kaufmann, 2016.
+\end{thebibliography}
+
+\end{document}
