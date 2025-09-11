@@ -17,7 +17,7 @@ The assignment focuses on dataset collection and applying the **7 Vs of Big Data
 - **Domain:** Stock Exchange  
 - **Source:** Kaggle (Boris Marjanovic)  
 - **Link:** [Price and Volume Data for All US Stocks & ETFs](https://www.kaggle.com/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs)  
-- **Size:** ~15GB expanded (CSV format)  
+- **Size:** ~15GB (CSV format)  
 - **Scope:** U.S. exchanges (NYSE, NASDAQ, AMEX) and ETFs  
 - **Period:** Multiple decades of daily OHLC (Open, High, Low, Close) + Volume  
 
