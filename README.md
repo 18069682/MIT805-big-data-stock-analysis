@@ -1,25 +1,54 @@
-# MIT 805 – Big Data: Stock Market Analysis
+# 📊 MIT 805 – Big Data Assignment 1 (Part 1)
 
-## 📌 Assignment Overview
-This repository contains work for **MIT 805 – Big Data (Semester Project 2025)**.  
-The project is divided into two parts:  
-- **Assignment 1 (Dataset Collection & 7Vs Analysis)**  
-- **Assignment 2 (MapReduce Processing & Visualization)**  
+This repository contains the submission for **MIT 805 Big Data: Assignment 1 (Part 1)** by **Muphulusi Dzivhani (u18069682)**.  
+The assignment focuses on dataset collection and applying the **7 Vs of Big Data** framework.
 
-## 📊 Dataset
-- **Source:** Kaggle – [Price and Volume Data for All US Stocks & ETFs](https://www.kaggle.com/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs)  
-- **Author:** Boris Marjanovic  
-- **Size:** ~516 MB compressed, expands to several GB  
-- **Format:** CSV files  
-- **Attributes:** Date, Open, High, Low, Close, Volume, Ticker Symbol  
-- **Coverage:** Thousands of US stocks and ETFs (NYSE, NASDAQ, AMEX)  
+---
 
-## 🚀 Assignment 1 Deliverables
-- Dataset description and analysis using the **7 Vs of Big Data**.  
-- Business and societal insights derived from dataset potential.  
-- Written report in LaTeX (compiled to PDF).  
+## 📁 Contents
+- `report.pdf` → Main written report (LaTeX compiled version)  
+- `report.tex` → LaTeX source file for the report  
+- `dataset_description.txt` → Brief notes on dataset attributes  
+- Future additions (for Assignment 2): Hadoop MapReduce code and visualizations  
 
-## 📂 Repository Structure
+---
+
+## 📊 Dataset Information
+- **Domain:** Stock Exchange  
+- **Source:** Kaggle (Boris Marjanovic)  
+- **Link:** [Price and Volume Data for All US Stocks & ETFs](https://www.kaggle.com/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs)  
+- **Size:** ~15GB expanded (CSV format)  
+- **Scope:** U.S. exchanges (NYSE, NASDAQ, AMEX) and ETFs  
+- **Period:** Multiple decades of daily OHLC (Open, High, Low, Close) + Volume  
+
+---
+
+## 🔎 7 Vs of Big Data Applied
+- **Volume:** Millions of rows, ~15GB expanded  
+- **Velocity:** Represents real-time trading environments (though historical)  
+- **Variety:** Structured OHLC + volume data, can be enriched with external sources  
+- **Value:** Forecasting, risk management, algorithmic trading, policy analysis  
+- **Veracity:** Requires cleaning (splits, missing days, anomalies)  
+- **Variability:** Highly sensitive to market events and economic cycles  
+- **Visualization & Validity:** Time-series charts, candlesticks, dashboards, and data quality checks  
+
+---
+
+## 🎯 Business & Societal Impact
+- **Investors/Traders:** Identify trends and improve strategies  
+- **Financial Institutions:** Manage risks, detect anomalies  
+- **Regulators:** Monitor systemic risks, assess policy effects  
+- **Researchers:** Study market efficiency and crisis response  
+
+---
+
 ## 🔗 Links
 - Kaggle Dataset: [here](https://www.kaggle.com/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs)  
-- GitHub Repository: [https://github.com/18069682/MIT805-big-data-stock-analysis](https://github.com/18069682/MIT805-big-data-stock-analysis)  
+- GitHub Repository: [MIT805-big-data-stock-analysis](https://github.com/18069682/MIT805-big-data-stock-analysis)  
+
+---
+
+## 📝 Author
+**Muphulusi Dzivhani**  
+Student Number: u18069682  
+University of Pretoria  
