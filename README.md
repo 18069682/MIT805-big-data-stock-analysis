@@ -6,8 +6,8 @@ The assignment focuses on dataset collection and applying the **7 Vs of Big Data
 ---
 
 ## 📁 Contents
-- `report.pdf` → Main written report (LaTeX compiled version)  
-- `report.tex` → LaTeX source file for the report  
+- `MIT805_Assignment_1.pdf` → Main written report (LaTeX compiled version)  
+- `MIT805_Assignment_1.tex` → LaTeX source file for the report  
 - `dataset_description.txt` → Brief notes on dataset attributes  
 - Future additions (for Assignment 2): Hadoop MapReduce code and visualizations  
 
