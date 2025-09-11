@@ -24,7 +24,7 @@ The assignment focuses on dataset collection and applying the **7 Vs of Big Data
 ---
 
 ## 🔎 7 Vs of Big Data Applied
-- **Volume:** Millions of rows, ~15GB expanded  
+- **Volume:** Millions of rows, ~15GB  
 - **Velocity:** Represents real-time trading environments (though historical)  
 - **Variety:** Structured OHLC + volume data, can be enriched with external sources  
 - **Value:** Forecasting, risk management, algorithmic trading, policy analysis  
